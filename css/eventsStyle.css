@@ -1,0 +1,116 @@
+.eve {
+    width: 100%;
+    display: flex;
+    flex-wrap: column wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    background-image: url("../bgImages/1.png");
+}
+.eve_upcoming {
+    width: 70%;
+    display: flex;
+    flex-wrap: column wrap;
+    flex-direction: column;
+    align-items: center;
+    gap:32px;
+    margin:0;
+}
+.eve_box {
+    width: 100%;
+    background: #eaff00;
+    border-radius: 0px;
+    display: flex;
+    flex-wrap:  wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:32px;
+    margin:0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.box_date {
+    width: 30%;
+    padding:0;
+    margin:0;
+    order: 2;
+}
+.box_pic {
+    width: 30%;
+    order: 1;
+}
+.box_desc {
+    width: 100%;
+    order: 4;
+    padding-top: 32px;
+}
+.box_readmore {
+    width: 30%;
+    order: 3;
+}
+.date_p_day {
+    font-weight: 700;
+    font-size: 2rem;
+    padding:0;
+    margin:0;
+}
+.date_p_month {
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding:0;
+    margin:0;
+}
+.box_pic_size {
+    width: 64px;
+    height: auto;
+}
+
+
+.readmore_btn {
+    padding: 16px;
+    color: inherit;
+}
+.readmore_btn:hover {
+    color: #fd6326;
+}
+
+@media all and (min-width: 768px) {
+    .eve_box {
+        flex-wrap: row wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .box_date {
+        width: 10%;
+        padding:0;
+        margin:0;
+        order: 1;
+    }
+    .box_pic {
+        width: 10%;
+        order: 2;
+    }
+    .box_desc {
+        width: 50%;
+        order: 3;
+        padding:0;
+    }
+    .desc_desc, .desc_time {
+        text-align: left;
+    }
+    .box_readmore {
+        width: 15%;
+        order: 4;
+    } 
+}
+
+
+/* Darkmode */
+.dark-theme .eve_box {
+    background: #336bff;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(158, 158, 158, 0.2);
+}
+.dark-theme .readmore_btn:hover {
+    color: #121212;
+}

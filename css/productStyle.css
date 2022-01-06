@@ -1,0 +1,163 @@
+@import "globalStyle.css";
+
+/* -- First Section -- */
+
+/* -- Intro Header -- */ 
+.captions {
+    display: flex;
+    flex-wrap: column wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.main_cap {
+    font-size: 2.5rem;
+    font-weight: 700;
+    max-width: 900px;
+    width: 80%;
+    order: 1;
+}
+.sub_cap{
+    font-size: 1.2rem;
+    font-weight: 300;
+    order: 2;
+    max-width: 900px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+/* Download Buttons */
+.buttonWrapper {
+    margin: -16px 64px 64px 64px;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    column-gap: 64px;
+    row-gap: 16px;
+}
+
+.downloadBT {
+    order: 1;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(88, 88, 88);
+    border: 2px solid #121212;
+    border-radius: 0px;
+    cursor: pointer;
+    background: #eaff00;
+    font-weight: 700;
+    padding: 16px;
+    margin: 0;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.downloadBT:hover {
+    background: #fd6326;
+    border: 2px solid #121212;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    color: #121212;
+}
+
+#dlIcon {
+    padding-right: 15px;
+}
+
+/* -- Info Sections -- */
+.sec_1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: column wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../bgImages/2.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+.sec_app {
+    display: flex;
+    flex-wrap: column wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 0;
+}
+.textbox {
+    width: 80%;
+    padding: 64px;
+}
+.picbox {
+    width: 80%;
+    padding: 64px;
+}
+#brightness {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+.sec_pics {
+    max-height: 120px;
+    width: auto;
+}
+
+
+/* -- Desktop View -- */
+@media all and (min-width: 768px) {
+    .sec_pics {
+        max-height: 200px;
+        width: auto;
+    }
+    .sec_app {
+        flex-wrap: row wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+    .textbox {
+        width: 40%;
+        padding: 32px;
+    }
+    .picbox {
+        width: 25%;
+        padding: 128px;
+    }
+}
+@media all and (min-width: 1140px) {
+    .sec_pics {
+        max-height: 320px;
+        width: auto;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .textbox {
+        order: 1;
+    }
+    .picbox {
+        order: 2;
+    }
+}
+
+
+/* .dark-theme changes */
+.dark-theme .downloadBT {
+    color: rgb(202, 202, 202);
+    background:#336bff;
+    border: 2px solid #336bff;
+}
+.dark-theme .downloadBT:hover {
+    background: #5d3c81;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
+.dark-theme #brightness {
+    background-color: rgba(255, 255, 255, 0.02);
+}
