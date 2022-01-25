@@ -1,11 +1,12 @@
 .eve {
-    width: 100%;
     display: flex;
     flex-wrap: column wrap;
     flex-direction: column;
     align-items: center;
     padding-bottom: 100px;
     background-image: url("../bgImages/1.png");
+    background-position-x: left;
+    background-size: cover;
 }
 .eve_upcoming {
     width: 70%;
@@ -18,7 +19,7 @@
 }
 .eve_box {
     width: 100%;
-    background: #eaff00;
+    background: var(--primColor);
     border-radius: 0px;
     display: flex;
     flex-wrap:  wrap;
@@ -28,6 +29,15 @@
     padding:32px;
     margin:0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.eve_box a img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.eve_box a img:hover {
+    transform: scale(1.2);
+    transition: 0.1s;
 }
 .box_date {
     width: 30%;
@@ -65,13 +75,81 @@
     height: auto;
 }
 
-
-.readmore_btn {
-    padding: 16px;
-    color: inherit;
+/* Slideshow */
+.eve_wrapper{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-.readmore_btn:hover {
-    color: #fd6326;
+.slideshow_wrapper {
+    margin-top: 210px;
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.slide_nav {
+    position: absolute;
+    width: 100%;
+    bottom: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.slide_bar {
+    background: var(--primColor);
+    border: 2px solid var(--primColor);
+    margin: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: none;
+}
+.slide_bar:hover {
+    background: var(--secondColor);
+    border: 2px solid #121212;
+}
+.slide_active {
+    background: var(--secondColor);
+    border: 2px solid var(--secondColor);
+}
+.slider_arrow {
+    width: 15%;
+    display: block;
+    transform: translateY(-80px);
+    font-size: 60px;
+    color: var(--primColor);
+    cursor: pointer;
+}
+.slider_arrow:hover {
+    color:var(--secondColor);
+}
+.slideshow {
+    width: 600%;
+    height: 100%;
+    display: flex;
+}
+.slide {
+    width: calc(100% / 6);
+    transition: 0.5s;
+    display: none;
+}
+.slide img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.eve_desc {
+    height: 20%;
+    margin: 0;
+    font-size: 20px;
+    background: var(--primColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
 }
 
 @media all and (min-width: 768px) {
@@ -102,15 +180,71 @@
         width: 15%;
         order: 4;
     } 
+    .eve_wrapper{
+        height: 720px;
+    }
+    .slideshow_wrapper {
+        margin-top: 210px;
+        height: 400px;
+        width: 700px;
+    }
+    .slide_nav {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .slide_bar {
+        display: block;
+        width: 64px;
+        height: 12px;
+        margin: 8px;
+    }
+    .slide img {
+        height: 85%;
+    }
+    .eve_desc {
+        height: 15%;
+        font-size: 18px;
+    }
+    .slider_arrow {
+        width: 15%;
+        transform: translateY(-160px);
+        font-size: 80px;
+    }
+
+}
+
+@media all and (min-width: 1064px) {
+    .eve_wrapper{
+        height: 920px;
+    }
+    .slideshow_wrapper {
+        margin-top: 210px;
+        height: 600px;
+        width: 1000px;
+    }
+    .slide img {
+        height: 90%;
+    }
+    .eve_desc {
+        height: 10%;
+        font-size: 22px;
+    }
+    .slide_bar {
+        width: 96px;
+    }
+    .slider_arrow {
+        width: 10%;
+        transform: translateY(-280px);
+    }
 }
 
 
 /* Darkmode */
-.dark-theme .eve_box {
-    background: #336bff;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(158, 158, 158, 0.2);
-}
-.dark-theme .readmore_btn:hover {
-    color: #121212;
-}
+.dark-theme .eve_box {background: var(--dm-primColor); color: #fff; box-shadow: 0 0 20px rgba(158, 158, 158, 0.2);}
+.dark-theme .eve_desc {background: var(--dm-primColor);}
+.dark-theme .slide_bar {background: var(--dm-primColor); border: 2px solid var(--dm-primColor);}
+.dark-theme .slide_bar:hover {background: var(--dm-secondColor); border: 2px solid #fff;}
+.dark-theme .slide_active {background: var(--dm-secondColor); border: 2px solid var(--dm-secondColor);}
+.dark-theme .slider_arrow {color: var(--dm-primColor);}
+.dark-theme .slider_arrow:hover {color:var(--dm-secondColor);}

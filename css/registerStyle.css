@@ -1,0 +1,63 @@
+.register_wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: column wrap;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    width: 60%;
+}
+h3 {
+    margin-bottom: 0;
+}
+.registerBt {
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(88, 88, 88);
+    border: 2px solid #121212;
+    border-radius: 0px;
+    cursor: pointer;
+    background: var(--primColor);
+    font-weight: 700;
+    padding: 16px;
+    margin: 0;
+    margin-bottom: 32px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.registerBt:hover {
+    background: var(--secondColor);
+    border: 2px solid #121212;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    color: #121212;
+}
+.register_wrapper a {
+    text-decoration: underline;
+    color:#121212;
+    cursor: pointer;
+    margin-bottom: 64px;
+}
+.goLogin {
+    padding-bottom: 32px;
+}
+
+
+/* .dark-theme changes */
+.dark-theme .registerBt {
+    color: rgb(202, 202, 202);
+    background:var(--dm-primColor);
+    border: 2px solid var(--dm-primColor);
+}
+.dark-theme .registerBt:hover {
+    background: var(--dm-secondColor);
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
+.dark-theme .register_wrapper a {
+    color: #fff;
+}

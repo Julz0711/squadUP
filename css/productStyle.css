@@ -1,5 +1,3 @@
-@import "globalStyle.css";
-
 /* -- First Section -- */
 
 /* -- Intro Header -- */ 
@@ -12,14 +10,16 @@
     align-content: center;
 }
 .main_cap {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     max-width: 900px;
     width: 80%;
     order: 1;
+    font-family: 'Graduate', comfortaa, sans-serif, bold;
+    line-height: 1.25;
 }
 .sub_cap{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     order: 2;
     max-width: 900px;
@@ -51,7 +51,7 @@
     border: 2px solid #121212;
     border-radius: 0px;
     cursor: pointer;
-    background: #eaff00;
+    background: var(--primColor);
     font-weight: 700;
     padding: 16px;
     margin: 0;
@@ -60,7 +60,7 @@
     transition-duration: 0.2s;
 }
 .downloadBT:hover {
-    background: #fd6326;
+    background: var(--secondColor);
     border: 2px solid #121212;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
     color: #121212;
@@ -72,7 +72,7 @@
 
 /* -- Info Sections -- */
 .sec_1 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-wrap: column wrap;
@@ -89,19 +89,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
     padding-bottom: 0;
 }
 .textbox {
     width: 80%;
     padding: 64px;
 }
+.textbox h4 {
+    font-size: 3rem;
+    font-family: 'Graduate', comfortaa, sans-serif, bold;
+}
+.textbox p {
+    font-weight: 300;
+}
 .picbox {
     width: 80%;
     padding: 64px;
-}
-#brightness {
-    background-color: rgba(0, 0, 0, 0.02);
 }
 .sec_pics {
     max-height: 120px;
@@ -110,7 +113,7 @@
 
 
 /* -- Desktop View -- */
-@media all and (min-width: 768px) {
+@media all and (min-width: 868px) {
     .sec_pics {
         max-height: 200px;
         width: auto;
@@ -122,11 +125,18 @@
     }
     .textbox {
         width: 40%;
-        padding: 32px;
     }
     .picbox {
         width: 25%;
         padding: 128px;
+    }
+    .text_left {
+        text-align: left;
+        margin: 16px 0;
+    }
+    .text_right {
+        text-align: right;
+        margin: 16px 0;
     }
 }
 @media all and (min-width: 1140px) {
@@ -149,11 +159,11 @@
 /* .dark-theme changes */
 .dark-theme .downloadBT {
     color: rgb(202, 202, 202);
-    background:#336bff;
-    border: 2px solid #336bff;
+    background:var(--dm-primColor);
+    border: 2px solid var(--dm-primColor);
 }
 .dark-theme .downloadBT:hover {
-    background: #5d3c81;
+    background: var(--dm-secondColor);
     color: #fff;
     border: 2px solid #fff;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);

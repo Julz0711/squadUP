@@ -1,31 +1,37 @@
 /* Color Plate */
 
 /* CSS HEX */
-.usused {
-    --chartreuse-traditional: #eaff00;
-    --orange-red: #fd6326;
-    --cyber-grape: #5d3c81;
-    --ultramarine-blue: #336bff;
-    --rich-black-fogra-39: #121212;
+:root {
+    --primColor: #eaff00;
+    --secondColor: #fd6326;
+    --dm-primColor: #336bff;
+    --dm-secondColor: #5d3c81;
+    --accentBlack: #121212;
+    --boxShadow: ;
+    --boxShadowH: ;
+    --dm-boxShadow: ;
+    --dm-boxShadowH: ;
 }
 
 /* -- Basics -- */
 
 * {
-    font-family: comfortaa;
+    font-family: comfortaa, sans-serif;
     text-align: center;
 }
-
+html {
+    width: 100%;
+}
 body {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     color: #121212; 
 }
-
+#brightness {
+    background-color: rgba(0, 0, 0, 0.02);
+}
 main {
-    height: 100%;
-    width: 100%;
     margin-top: 100px;
 }
 .sec_header {
@@ -33,6 +39,7 @@ main {
     padding: 32px;
     padding-top: 64px;
     padding-bottom: 0;
+    font-family: 'Graduate', comfortaa, sans-serif, bold;
 }
 .sec_subheader {
     max-width: 900px;
@@ -52,27 +59,60 @@ main {
     order: 1;
     padding: 16px;
 }
-#sun-moon {
+.sunV2 {
+    background-image: url("../icons/svgs/SVG/sun.svg");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
     margin: 16px;
 }
-#sun-moon:hover {
-    color:#fd6326;
+.sunV2:hover {
     cursor: pointer;
+    transform: scale(1.1);
+    transition: .1s;
+}
+.moonV2 {
+    background-image: url("../icons/svgs/SVG/moon.svg");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin: 16px;
+}
+.moonV2:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .1s;
 }
 #bars {
     margin: 16px;
 }
 #bars:hover {
-    color:#fd6326;
+    color:var(--secondColor);
     cursor: pointer;
 }
-
-/* Logo stuff */
-.logo {
-    width: 100px;
-    height: auto;
+.logoLM {
+    background-image: url("../logos/logoLMV2.svg");
+    background-size: cover;
+    width: 135px;
+    height: 41px;
+    margin: 16px;
+}
+.logoLM:hover {
     cursor: pointer;
-    padding: 16px;
+    transform: scale(1.1);
+    transition: .1s;
+}
+.logoDM {
+    background-image: url("../logos/logoDMV2.svg");
+    background-size: cover;
+    width: 135px;
+    height: 41px;
+    margin: 16px;
+}
+.logoDM:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .1s;
 }
 
 /* Navigation */
@@ -103,7 +143,7 @@ li a:visited {
     color: inherit;
 }
 li a:hover {
-    color:#fd6326;
+    color:var(--secondColor);
     text-decoration: underline;
     cursor: pointer;
 }
@@ -129,6 +169,42 @@ ul {box-shadow: 0 2px 0px #121212;}
 .nav_toggle {
     order: 1;
 }
+.nav_logout_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 32px;
+}
+.signInOutBtn {
+    width: 80px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(88, 88, 88);
+    border: 2px solid #121212;
+    border-radius: 0px;
+    cursor: pointer;
+    background: var(--primColor);
+    font-weight: 700;
+    padding: 8px;
+    margin: 0;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.signInOutBtn:hover {
+    background: var(--secondColor);
+    border: 2px solid #121212;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    color: #121212;
+}
+nav hr {
+    border: 1px solid #c0c0c0;
+    margin: 8px 32px;
+}
 .nav_items {
     width: 100%;
     order: 4;
@@ -139,23 +215,13 @@ ul {box-shadow: 0 2px 0px #121212;}
     display: block;
 }
 
-
-/* jump back to the top */
-.btnBack {
-    height: 50px;
-    width: 50px;
-    border-radius: 0px;
-    border: 2px solid #eaff00;
-    color: rgb(88,88,88);
-    text-decoration: none;
-    background: #eaff00;
+.arrowUp {
+    width: 100px;
+    height: 100px;
 }
-.btnBack:hover {
-    background: #fd6326;
-    border: 2px solid #121212;
-    cursor: pointer;
-    color: #121212;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+.arrowUp:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
 }
 
 .divBack {
@@ -165,7 +231,7 @@ ul {box-shadow: 0 2px 0px #121212;}
 
 /* -- Footer -- */
 footer {
-    background: linear-gradient(90Deg, #eaff00, #fd6326);
+    background: linear-gradient(90Deg, var(--primColor), var(--secondColor));
     color: #0E1111;
     padding: 32px;
     margin: 0;
@@ -181,7 +247,8 @@ footer {
     color: #0E1111;
 }
 #footer_Icon:hover {
-    color: #fff;
+    transform: scale(1.2); 
+    transition: 0.1s ease-in-out;
 }
 .a_footer {
     color: #121212;
@@ -193,7 +260,7 @@ footer {
 
 
 /* Desktop Menu */
-@media all and (min-width: 768px) {
+@media all and (min-width: 1100px) {
     .sec_header {
         font-size: 4rem; 
     }
@@ -203,12 +270,10 @@ footer {
     .nav_items {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         order: 2;
-        width: 500px;
+        width: 750px;
         margin-bottom: 0;
-    }
-    .item {
-        width: auto;
     }
     .nav_dm_toggle {
         order: 3;
@@ -218,6 +283,14 @@ footer {
     }
     #nav_menu li {
         padding: 15px 10px;
+    }
+    nav hr {
+        display: none;
+    }
+    .nav_logout_wrapper {
+        margin:0;
+        margin-left: 50px;
+        gap: 16px;
     }
 
     footer {
@@ -235,26 +308,35 @@ footer {
 /* all .dark-theme changes */
 /* nav */
 .dark-theme {background-color: #121212; color: white;}
-.dark-theme #sun-moon:hover {color:#336bff;}
 .dark-theme ul {box-shadow: 0 2px 0px #fff;}
-.dark-theme li a:hover {color: #336bff;}
+.dark-theme li a:hover {color: var(--dm-primColor);}
 
 /* back to top button */
 .dark-theme .btnBack {
     color: #fff;
-    background:#336bff;
-    border: 2px solid #336bff;
+    background:var(--dm-primColor);
+    border: 2px solid var(--dm-primColor);
 }
 .dark-theme .btnBack:hover {
-    background: #5d3c81;
+    background: var(--dm-secondColor);
     border: 2px solid #fff;
     cursor: pointer;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
 }
 
 /* footer */
-.dark-theme footer {background:linear-gradient(90Deg, #336bff, #5d3c81); color: #fff;}
+.dark-theme footer {background:linear-gradient(90Deg, var(--dm-primColor), var(--dm-secondColor)); color: #fff;}
 .dark-theme #footer_Icon {padding-right: 10px; color: #fff;}
-.dark-theme #footer_Icon:hover {color: #fd6326;}
 .dark-theme .a_footer {color: #fff; text-decoration: underline;}
-.dark-theme .a_footer:hover {color: #fd6326;}
+.dark-theme .a_footer:hover {color: var(--secondColor);}
+.dark-theme .signInOutBtn {
+    color: rgb(202, 202, 202);
+    background:var(--dm-primColor);
+    border: 2px solid var(--dm-primColor);
+}
+.dark-theme .signInOutBtn:hover {
+    background: var(--dm-secondColor);
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
