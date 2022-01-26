@@ -1,35 +1,35 @@
 <?php
-    session_start();
+session_start();
 
-    if(isset($_SESSION['username'])):
-        header("Location: indexSession.php");
+if (isset($_SESSION['username'])) :
+    header("Location: indexSession.php");
+endif;
+
+require("connect.php");
+
+if (isset($_POST["submit"])) :
+    $username = strtolower($_POST['username']);
+    $password = $_POST['pw'];
+    //$password = md5($password);
+
+    $user_query = $conn->prepare("SELECT id FROM users WHERE username = ? AND password = ?");
+    $user_query->bind_param('ss', $username, $password);
+    $user_query->execute();
+    $user_result = $user_query->get_result();
+
+    $res = $conn->prepare("SELECT username FROM users WHERE username = ? AND password = ?");
+    $res->bind_param('ss', $username, $password);
+    $res->execute();
+    $active = $res->get_result();
+
+
+    if ($active->num_rows == 1) :
+        $object_query = $active->fetch_object();
+        $_SESSION['username'] = $object_query->username;
+    else :
+        echo '<span class="phpStyle">' . 'Deine Angaben sind leider nicht korrekt.' . '</span>';
     endif;
-
-    require("connect.php");
-                        
-    if(isset($_POST["submit"])):
-        $username = strtolower($_POST['username']);
-        $password = $_POST['pw'];
-        //$password = md5($password);
-
-        $user_query = $conn->prepare("SELECT id FROM users WHERE username = ? AND password = ?");
-        $user_query->bind_param('ss', $username, $password);
-        $user_query->execute();
-        $user_result = $user_query->get_result();
-
-        $res = $conn->prepare("SELECT username FROM users WHERE username = ? AND password = ?");
-        $res->bind_param('ss', $username, $password);
-        $res->execute();
-        $active = $res->get_result();
-        
-
-        if($active->num_rows == 1):
-            $object_query = $active->fetch_object();
-            $_SESSION['username'] = $object_query->username;
-        else:
-            echo '<span class="phpStyle">' . 'Deine Angaben sind leider nicht korrekt.' . '</span>';
-        endif;
-    endif;
+endif;
 ?>
 <!Doctype html5>
 <html lang="de">
@@ -45,17 +45,15 @@
     <!-- Libaries and Fonts from the Web -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
-            crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoS.png" >
+    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoS.png">
 
     <!-- Script from the Web -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+
 
     <style>
         .phpStyle {
@@ -69,26 +67,26 @@
 
 <body class="">
 
-    
+
     <!-- Navigation -->
     <nav>
 
         <ul id="nav_menu">
-            <li class="nav_logo"><a href="#intro"><img id="logoChange" class="logo" src="../logos/logoLM.png"></a></li>
+            <li class="nav_logo"><a href="../html/index.php#intro" id="logoChange" class="logoLM"></a></li>
             <div class="nav_items">
-                <li><a class="nav_link" href="#produkt">Produkt</a></li>
-                <li><a class="nav_link" href="#sportarten">Sportarten</a></li>
-                <li><a class="nav_link" href="#events">Events</a></li>
-                <li><a class="nav_link" href="#aboutUs">Über Uns</a></li>
-                <li><a class="nav_link" href="../html/contact.html">Kontakt</a></li>
+                <li><a class="nav_link" href="../html/index.php#produkt">Produkt</a></li>
+                <li><a class="nav_link" href="../html/index.php#sportarten">Sportarten</a></li>
+                <li><a class="nav_link" href="../html/index.php#events">Events</a></li>
+                <li><a class="nav_link" href="../html/index.php#aboutUs">Über Uns</a></li>
+                <li><a class="nav_link" href="../html/contact.php">Kontakt</a></li>
                 <hr>
                 <div class="nav_logout_wrapper">
                     <a href="../php/register.php" class="signInOutBtn">Registrieren</a>
                     <a href="../php/login.php" class="signInOutBtn">Anmelden</a>
                 </div>
             </div>
-            <li class="nav_dm_toggle" id="dm-li" onclick="toggleTheme()"><img src="../icons/svgs/SVG/sun.svg"
-                    id="sun-moon" alt="sun">
+            <li class="nav_dm_toggle" onclick="toggleTheme()">
+                <div id="dm-li" class="sunV2"></div>
             </li>
             <li class="nav_toggle" id="tog-li"><i id="bars" class="fas fa-bars fa-lg"></i></li>
         </ul>
@@ -103,7 +101,7 @@
 
                 <h1 class="sec_header">Login</h1>
                 <h3 class="sec_subheader">Melde dich bei deinem squadUP Konto ein!</h3>
-                
+
                 <div class="formular">
 
                     <form action="" method="POST">
@@ -118,10 +116,10 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
 
-    
+
     <footer>
         <div class="social_media">
             <a href="https://www.instagram.com/cursedcvdmemes/"><i id="footer_Icon" class="fab fa-instagram fa-lg"></i></a>
@@ -142,7 +140,7 @@
     <script>
         AOS.init();
     </script>
-  
+
 
 </body>
 

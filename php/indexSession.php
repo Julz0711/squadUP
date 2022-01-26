@@ -46,22 +46,20 @@ endif;
     <nav>
 
         <ul id="nav_menu">
-            <li class="nav_logo"><a href="#intro"><img id="logoChange" class="logo" src="../logos/logoLM.png"></a></li>
+            <li class="nav_logo"><a href="#intro" id="logoChange" class="logoLM"></a></li>
             <div class="nav_items">
                 <li><a class="nav_link" href="#produkt">Produkt</a></li>
                 <li><a class="nav_link" href="#sportarten">Sportarten</a></li>
                 <li><a class="nav_link" href="#events">Events</a></li>
                 <li><a class="nav_link" href="#aboutUs">Über Uns</a></li>
-                <li><a class="nav_link" href="../html/contact.html">Kontakt</a></li>
+                <li><a class="nav_link" href="../html/contact.php">Kontakt</a></li>
                 <hr>
                 <div class="nav_logout_wrapper">
-                    <?php echo "Hallo, " . $_SESSION['username'] . "!" ?>
-                    <a href="logout.php" class="signInOutBtn">Logout</a>
+                    <a href="../php/register.php" class="signInOutBtn">Registrieren</a>
+                    <a href="../php/login.php" class="signInOutBtn">Anmelden</a>
                 </div>
             </div>
-
-            <li class="nav_dm_toggle" id="dm-li" onclick="toggleTheme()"><img src="../icons/svgs/SVG/sun.svg" id="sun-moon" alt="sun">
-            </li>
+            <li class="nav_dm_toggle" onclick="toggleTheme()"><div id="dm-li" class="sunV2"></div></li>
             <li class="nav_toggle" id="tog-li"><i id="bars" class="fas fa-bars fa-lg"></i></li>
         </ul>
 

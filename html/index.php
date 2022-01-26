@@ -49,21 +49,19 @@
     <nav>
 
         <ul id="nav_menu">
-            <!--    <li class="nav_logo"><a href="#intro"><img id="logoChange" class="logo" src="../logos/logoLM.png"></a></li> -->
-            <li class="nav_logo"><div href="#intro" id="logoChange" class="logoLM"></div></li>
+            <li class="nav_logo"><a href="#intro" id="logoChange" class="logoLM"></a></li>
             <div class="nav_items">
                 <li><a class="nav_link" href="#produkt">Produkt</a></li>
                 <li><a class="nav_link" href="#sportarten">Sportarten</a></li>
                 <li><a class="nav_link" href="#events">Events</a></li>
                 <li><a class="nav_link" href="#aboutUs">Über Uns</a></li>
-                <li><a class="nav_link" href="contact.html">Kontakt</a></li>
+                <li><a class="nav_link" href="contact.php">Kontakt</a></li>
                 <hr>
                 <div class="nav_logout_wrapper">
                     <a href="../php/register.php" class="signInOutBtn">Registrieren</a>
                     <a href="../php/login.php" class="signInOutBtn">Anmelden</a>
                 </div>
             </div>
-            <!--    <li class="nav_dm_toggle" id="dm-li" onclick="toggleTheme()"><img src="../icons/svgs/SVG/sun.svg" id="sun-moon" alt="sun">  -->
             <li class="nav_dm_toggle" onclick="toggleTheme()"><div id="dm-li" class="sunV2"></div></li>
             <li class="nav_toggle" id="tog-li"><i id="bars" class="fas fa-bars fa-lg"></i></li>
         </ul>
@@ -525,7 +523,7 @@
                         <img class="fb_customer" src="../icons/svgs/SVG/human.svg" alt="Kundenbild">
                     </div>
                     <div class="fb_topright">
-                        <h4 class="fb_header">Max Mustermann</h4>
+                        <h4 class="fb_header">Titus Hellinge</h4>
                         <div class="img_container"><img src="../icons/svgs/SVG/Rating5.svg" alt="5 stars"></div>
                         <p>24.12.2021</p>
                     </div>
@@ -540,13 +538,13 @@
                         <img class="fb_customer" src="../icons/svgs/SVG/human.svg" alt="Kundenbild">
                     </div>
                     <div class="fb_topright">
-                        <h4 class="fb_header">Max Mustermann</h4>
+                        <h4 class="fb_header">Markus Essing</h4>
                         <div class="img_container"><img src="../icons/svgs/SVG/Rating5.svg" alt="5 stars"></div>
                         <p>24.12.2021</p>
                     </div>
 
-                    <p class="fb_text">Tolle App! Genau das habe ich gebraucht. Ich treffe mich jetzt regelmäßig
-                        Freitags zum Fussball spielen und das mit Leuten die ich vorher gar nicht kannte.
+                    <p class="fb_text">Mir ging es die letzten Monate echt nicht sehr gut. Dank squadUP mache ich jetzt
+                        wieder regelmäßig Sport. Ich bin erstaunt, weiter so!!!
                     </p>
                 </div>
 
@@ -555,13 +553,13 @@
                         <img class="fb_customer" src="../icons/svgs/SVG/human.svg" alt="Kundenbild">
                     </div>
                     <div class="fb_topright">
-                        <h4 class="fb_header">Max Mustermann</h4>
+                        <h4 class="fb_header">Quentin Frey</h4>
                         <div class="img_container"><img src="../icons/svgs/SVG/Rating5.svg" alt="5 stars"></div>
                         <p>24.12.2021</p>
                     </div>
 
-                    <p class="fb_text">Tolle App! Genau das habe ich gebraucht. Ich treffe mich jetzt regelmäßig
-                        Freitags zum Fussball spielen und das mit Leuten die ich vorher gar nicht kannte.
+                    <p class="fb_text">Ich habe schon viele neue Freunde gefunden die auch gerne Volleyball spielen,
+                        hätte nicht gedacht, dass es so noch soviele gibt :D!
                     </p>
                 </div>
 
@@ -579,11 +577,6 @@
                 <h1 class="sec_header">Über uns</h1>
 
                 <div class="au_text">
-                    <!--       Wir sind ein junges Unternehmen, das sich aufgrund einer Aufgabenstellung im Studium
-                        zusammengefunden hatte. <br>
-                        Die genannte Aufgabe beinhaltete sich Gedanken zu einem Produkt zu machen, das sich mit der Gesundheit beschäftigt, <br> 
-                        damit wir Logos, Zielgruppen und das Entwickeln einer passenden Website zu verinnerlichen lernen. <br> <br>
-                 -->
                     Wir sind drei junge Studenten mit der Mission, Menschen mit psychischen oder körperlichen Problemen
                     für sportliche Tätigkeiten zu motivieren. <br><br>
                     Immer mehr Menschen fehlt es an sozialer Bindung, haben jedoch das Verlangen sich mit Leuten zu
@@ -602,9 +595,9 @@
                         <div class="au_name">Vanessa Frey</div>
                         <div class="au_desc">squadUP CEO</div>
                         <div class="au_about">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quasi vero reiciendis tempore animi nesciunt voluptatem
-                            corporis quos labore laborum.
+                            21, geboren in Elmshorn<br>
+                            Student an der HSHL<br>
+                            Computer Visualistik und Design<br>
                         </div>
                         <div class="au_social">
                             <a href="#"><i id="au_icon" class="fab fa-instagram fa-lg"></i></a>
@@ -619,9 +612,9 @@
                         <div class="au_name">Julian Gutknecht</div>
                         <div class="au_desc">squadUP CEO</div>
                         <div class="au_about">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quasi vero reiciendis tempore animi nesciunt voluptatem
-                            corporis quos labore laborum.
+                            23, geboren in Stuttgart<br>
+                            Student an der HSHL<br>
+                            Computer Visualistik und Design<br>
                         </div>
                         <div class="au_social">
                             <a href="#"><i id="au_icon" class="fab fa-instagram fa-lg"></i></a>
@@ -636,9 +629,9 @@
                         <div class="au_name">Niklas Puls</div>
                         <div class="au_desc">squadUP CEO</div>
                         <div class="au_about">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quasi vero reiciendis tempore animi nesciunt voluptatem
-                            corporis quos labore laborum.
+                            19, geboren in Bremen<br>
+                            Student an der HSHL<br>
+                            Computer Visualistik und Design<br>
                         </div>
                         <div class="au_social">
                             <a href="#"><i id="au_icon" class="fab fa-instagram fa-lg"></i></a>
