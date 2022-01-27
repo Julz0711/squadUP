@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['username'])) :
     header("Location: ../html/index.php");
 endif;
@@ -48,15 +47,15 @@ endif;
         <ul id="nav_menu">
             <li class="nav_logo"><a href="#intro" id="logoChange" class="logoLM"></a></li>
             <div class="nav_items">
-                <li><a class="nav_link" href="#produkt">Produkt</a></li>
+                <li><a class="nav_link" href="#product">Produkt</a></li>
                 <li><a class="nav_link" href="#sportarten">Sportarten</a></li>
                 <li><a class="nav_link" href="#events">Events</a></li>
                 <li><a class="nav_link" href="#aboutUs">Über Uns</a></li>
                 <li><a class="nav_link" href="../html/contact.php">Kontakt</a></li>
                 <hr>
                 <div class="nav_logout_wrapper">
-                    <a href="../php/register.php" class="signInOutBtn">Registrieren</a>
-                    <a href="../php/login.php" class="signInOutBtn">Anmelden</a>
+                    <p>Hallo <?php echo $_SESSION['username']; ?>!</p>
+                    <a href="../php/logout.php" class="signInOutBtn">Logout</a>
                 </div>
             </div>
             <li class="nav_dm_toggle" onclick="toggleTheme()"><div id="dm-li" class="sunV2"></div></li>
@@ -101,7 +100,7 @@ endif;
 
 
         <!-- Produkt Section -->
-        <section id="produkt">
+        <section id="product">
 
             <div class="sec_app" id="brightness" data-aos="zoom-in-right" data-aos-duration="1000">
 
@@ -183,6 +182,25 @@ endif;
             </div>
         </section>
 
+        <section id="facts">
+
+            <div class="facts_wrapper" id="brightness">
+
+                <div class="facts_container">
+
+                    <h3 class="fact_header">Wir wollen dir nicht nur dabei helfen neue Freunde zu finden.<br>
+                        Auch wenn wir uns sehr freuen wenn wir dich dabei unterstützen können.<br><br> Wir wollen vor allem, dass
+                        es unseren Mitmenchen nicht nur körperlich gut geht, sondern auch mental.
+                    </h3>
+
+                    <div id="graphicRef" class="graphic_container graphicUrlLM"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
 
         <!-- Sportarten Section -->
         <section id="sportarten">
@@ -190,6 +208,9 @@ endif;
             <div class="spa_catalog" id="brightness">
 
                 <h1 class="sec_header">Sportarten</h1>
+                <h3 class="sec_subheader">Du brauchst einen kleien Denkanstoß welche Sportarten ea alles so gibt?<br>
+                    Hier ist eine kleine Übersicht!
+                </h3>
 
                 <div class="spa_boxes">
 
@@ -216,9 +237,7 @@ endif;
                         <p class="spa_p">
                             Basketball ist ein technisch und taktisch anspruchsvolles Ballspiel, bei dem
                             zwei Mannschaften mit mindestens zwei Spielenden gegeneinander antreten. Ziel ist es,
-                            den Ball in den 3,05 Meter hohen Korb des Gegners zu werfen. Viele verschiedene
-                            Minispiele, wie das bekannte "HORSE", bei dem man Körbe des anderen imitieren muss,
-                            machen den Sport ebenfalls attraktiv.
+                            den Ball in den 3,05 Meter hohen Korb des Gegners zu werfen.
 
                         </p>
                     </div>
@@ -230,11 +249,10 @@ endif;
                             Spieler pro Team: 2 - 6
                         </p>
                         <p class="spa_p">
-                            Volleyball ist ein Ballspiel, das sowohl zu den Mannschafts- als auch zu den
-                            Rückschlagsportarten gehört. Zwei Teams mit mindestens je zwei Spielern baggern,
+                            Volleyball ist ein Ballspiel, bei dem zwei Teams mit mindestens je zwei Spielern, durch baggern,
                             pritschen oder schmettern den Ball "volley" über ein Netz in der Spielfeldmitte.
                             Ziel ist es, den Ball im gegnerischen Spielfeld auf den Boden zu befördern
-                            und so zu punkten. Die Beach-Volleyball Variante macht den Sport noch vielseitiger.
+                            und so zu punkten.
 
                         </p>
                     </div>
@@ -277,40 +295,8 @@ endif;
                             Tischtennis ist klassischerweise ein 1 gegen 1. Ähnlich wie beim Tennis wird versucht,
                             ein kleiner Ball am Gegner vorbei zuschlagen. Der große Unterschied ist allerdings,
                             dass wie der Name schon verrät an einem Tisch mit einem kleinen Netz in der Mitte gespielt
-                            wird. Auch die Schläger sind deutlich kleiner. Minispiele wie "Um die Platte" machen
-                            den Sport vielseitiger, da auch mehr als 2 Spieler teilnehmen können.
-
+                            wird.
                         </p>
-                    </div>
-
-                    <div class="spa_container">
-                        <h2 class="spa_header">Krafttraining</h2>
-                        <img src="../icons/svgs/SVG/excersice.svg" class="spa_icons">
-                        <p class="spa_p">
-                            Spieler pro Team: 1
-                        </p>
-                        <p class="spa_p">
-                            Durch Krafttraining und die entsprechenden Übungen wird die maximale Muskelkraft
-                            gesteigert. Die Trainingsreize wirken sich dabei auf die Schnellkraft
-                            (Kontraktionsfähigkeit der Muskeln) und die Kraftausdauer bei der Muskelbelastung aus.
-                            Ein attraktiver Körper ist ein Bonus obendrauf.
-
-                        </p>
-                    </div>
-
-                    <div class="spa_container">
-                        <h2 class="spa_header">und viele mehr</h2>
-                        <img src="../icons/svgs/SVG/skater.svg" class="spa_icons">
-                        <img src="../icons/svgs/SVG/runner.svg" class="spa_icons">
-                        <img src="../icons/svgs/SVG/handball.svg" class="spa_icons">
-                        <!--
-                        <p class="spa_p">
-                            Spieler pro Team: 4 - 11
-                        </p>
-                        <p class="spa_p">
-                            Warum der Sport Football heißt wird wohl niemand wissen, aber der USA-Nationalsport ist auch in Deutschland beliebt. 
-                        </p>
-                    -->
                     </div>
                 </div>
 
@@ -410,9 +396,9 @@ endif;
         </section>
 
         <!-- Slideshow Section -->
-        <section id="sportarten">
+        <section id="events">
 
-            <div class="eve_wrapper" id="brightness">
+            <div class="eve_wrapper">
 
                 <h3 class="sec_subheader" style="margin-top: 100px;">Hier kannst du ein paar schöne Momente vergangener Events betrachten. Hoffentlich
                     ist dein Gesicht auf dem nächsten Bild zu sehen!</h3>
@@ -476,7 +462,7 @@ endif;
         </section>
 
 
-        <section id="feedback">
+        <section id="events">
 
             <div class="feedback_container" id="brightness">
 

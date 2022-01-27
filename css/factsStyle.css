@@ -1,4 +1,44 @@
-.facts_wrapper {
+.facts_container {
     width: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:64px;
+    padding-bottom: 64px;
+}
+.fact_header {
+    padding: 64px;
+}
+.graphic_container{
+    background-size: cover;
+    width: 900px;
+    height: 617px;
+    margin-bottom: 32px;
+}
+.graphicUrlDM{
+    background-image: url(../pics/Graphic_dm.svg);
+}
+.graphicUrlLM{
+    background-image: url(../pics/Graphic_lm.svg);
+}
+
+@media all and (max-width: 1050px) {
+    .graphic_container{
+        width: 701px;
+        height: 480px;
+    }
+}
+@media all and (max-width: 800px) {
+    .graphic_container{
+        width: 501px;
+        height: 343px;
+    }
+}
+@media all and (max-width: 600px) {
+    .graphic_container{
+        width: 350px;
+        height: 240px;
+    }
 }

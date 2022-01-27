@@ -9,6 +9,8 @@ function toggleTheme() {
             document.body.classList.remove('dark-theme');
             document.getElementById("dm-li").classList.add('sunV2');
             document.getElementById("dm-li").classList.remove('moonV2');
+            document.getElementById("graphicRef").classList.add('graphicUrlLM');
+            document.getElementById("graphicRef").classList.remove('graphicUrlDM');
             document.getElementById("logoChange").classList.add('logoLM');
             document.getElementById("logoChange").classList.remove('logoDM');
             document.getElementById("tog-li").innerHTML = "<i id='bars' class='fas fa-bars fa-lg'></i>";
@@ -21,6 +23,8 @@ function toggleTheme() {
             document.body.classList.add('dark-theme');
             document.getElementById("dm-li").classList.remove('sunV2');
             document.getElementById("dm-li").classList.add('moonV2');
+            document.getElementById("graphicRef").classList.remove('graphicUrlLM');
+            document.getElementById("graphicRef").classList.add('graphicUrlDM');
             document.getElementById("logoChange").classList.remove('logoLM');
             document.getElementById("logoChange").classList.add('logoDM');
             document.getElementById("tog-li").innerHTML = "<i id='bars' class='fas fa-bars fa-lg'></i>";
@@ -34,6 +38,8 @@ if (localStorage.getItem('isDarkMode') === 'true') {
     document.body.classList.add('dark-theme');
     document.getElementById("dm-li").classList.remove('sunV2');
     document.getElementById("dm-li").classList.add('moonV2');
+    document.getElementById("graphicRef").classList.remove('graphicUrlLM');
+    document.getElementById("graphicRef").classList.add('graphicUrlDM');
     document.getElementById("logoChange").classList.remove('logoLM');
     document.getElementById("logoChange").classList.add('logoDM');
 }
@@ -90,8 +96,32 @@ $(function () {
 });
 
 
+//show active nav position in index
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll('nav ul .nav_items li');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach( section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if(pageYOffset >= (sectionTop - sectionHeight / 3)){
+            current = section.getAttribute('id');
+        }
+    })
+
+    navLi.forEach( li => {
+        li.classList.remove('activePos');
+        if(li.classList.contains(current)) {
+            li.classList.add('activePos');
+        }
+    })
+})
+
+
 //intro picture moves a little while scrolling
 var win = $(window);
 win.scroll(function () {
-    $(".sec_1").css("background-position-y", win.scrollTop() / 4 + "px");
+    $(".sec_1").css("background-position-y", win.scrollTop() / 2 + "px");
+    $("#footb").css("transform", "translate(700px,-650px) rotate(" + win.scrollTop() / 2 + ")");
 })

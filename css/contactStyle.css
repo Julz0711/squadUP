@@ -6,20 +6,9 @@ main {
     padding: 64px;
     margin: 0;
     box-sizing: border-box;
-}
-.section_header {
-    margin: 0 auto;
-    padding-top: 32px;
-    font-weight: 700;
-    font-size: 2.5rem;
-}
-.section_subheader {
-    margin: 0 auto;
-    padding-top: 32px;
-    padding-bottom: 64px;
-    font-weight: 300;
-    font-size: 1.2rem;
-    max-width: 900px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .success_wrapper {
     padding-top: 150px;
@@ -57,6 +46,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 64px;
     margin: 0 auto;
     padding: 64px;
     max-width: 900px;
@@ -89,6 +79,7 @@ main {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 .sendBtn {
+    font-family: 'Graduate', comfortaa, sans-serif, bold;
     margin-top: 16px;
     height: 50px;
     width: 400px;
@@ -194,6 +185,10 @@ main {
         padding: 25px;
         margin: 0;
         margin-bottom: 64px;
+        gap: 16px;
+    }
+    .contact_ul {
+        width: 250px;
     }
     .form_hz {
         width: 250px;
@@ -205,10 +200,15 @@ main {
         width: 250px;
     }
     .contact_details {
-        width: 300px;
+        width: 250px;
+    }
+    .contact_ul {
+        width: 250px;
+        padding: 0;
     }
     .contact_li {
         font-size: 12px;
+        text-align: center;
     }
     .detail_text {
         font-size: 12px;
@@ -218,6 +218,15 @@ main {
     }
     .copyright {
         font-size: 12px;
+    }
+    .place {
+        margin-left: calc(31px + 17px);
+    }
+    .phone {
+        margin-left: calc(26px + 32px);
+    }
+    .email {
+        margin-left: 21px;
     }
 }
 
@@ -257,11 +266,15 @@ main {
 }
 .dark-theme .sendBtn {
     background-color: var(--dm-primColor);
-    border: 2px solid #fff;
+    border: 2px solid var(--dm-primColor);
     color: rgb(202, 202, 202);;
 }
 .dark-theme .sendBtn:hover {
     background-color: var(--dm-secondColor);
+    border: 2px solid #fff;
     box-shadow: 0 0 20px rgba(121, 121, 121, 0.25);
+    color: #fff;
+}
+.dark-theme .social_list a {
     color: #fff;
 }

@@ -40,8 +40,8 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 input[type=submit] {
+    font-family: 'Graduate', comfortaa, sans-serif, bold;
     margin-top: 16px;
-    font-weight: 700;
     font-size: 1.2rem;
     height: 50px;
     width: 530px;
@@ -78,6 +78,7 @@ hr {
 .dark-theme input[type=text], .dark-theme input[type=password], .dark-theme input[type=email] {background-color: #121212; color: #fff; border:2px solid #fff;}
 .dark-theme input[type=text]:hover, .dark-theme input[type=password]:hover, .dark-theme input[type=email]:hover {border: 2px solid var(--dm-secondColor); box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);}
 .dark-theme input[type=text]:focus, .dark-theme input[type=password]:focus, .dark-theme input[type=email]:focus {background-color: #121212; border: 2px solid #fff; box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);}
+.dark-theme input[type=text]:active, .dark-theme input[type=password]:active, .dark-theme input[type=email]:active {background-color: #121212;}
 .dark-theme input[type=submit] {background-color: var(--dm-primColor); border: 2px solid var(--dm-primColor); color: rgb(202, 202, 202);;}
 .dark-theme input[type=submit]:hover {background-color: var(--dm-secondColor); border: 2px solid #fff; box-shadow: 0 0 20px rgba(121, 121, 121, 0.25); color: #fff}
 .dark-theme .link {color: #5e5e5e;}

@@ -42,6 +42,7 @@
 }
 
 .downloadBT {
+    font-family: 'Graduate', comfortaa, sans-serif, bold;
     order: 1;
     width: 320px;
     display: flex;
@@ -110,6 +111,29 @@
     max-height: 120px;
     width: auto;
 }
+
+
+.sportIcons {
+    position: relative;
+    filter: blur(1px);
+    filter: grayscale(50%);
+}
+#footb {
+    transform: translate(700px,-650px);
+}
+#basketb {
+    transform: translate(-800px,-600px);
+}
+#volleyb {
+    transform: translate(-450px,-300px);
+}
+#tennisb {
+    transform: translate(100px,-1000px);
+}
+#federb {
+    transform: translate(500px,-500px);
+}
+
 
 
 /* -- Desktop View -- */

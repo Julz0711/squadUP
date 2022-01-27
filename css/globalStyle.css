@@ -175,9 +175,11 @@ ul {box-shadow: 0 2px 0px #121212;}
     justify-content: center;
     margin-top: 32px;
     gap: 32px;
+    flex-direction: row;
 }
 .signInOutBtn {
-    width: 80px;
+    font-family: 'Graduate', comfortaa, sans-serif, light;
+    width: 90px;
     font-size: 0.8rem;
     text-decoration: none;
     display: flex;
@@ -214,6 +216,16 @@ nav hr {
 .nav_items.active {
     display: block;
 }
+.nav_items li {
+    background: linear-gradient(transparent 46px, black 46px, black 50px, transparent 30px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+}
+nav ul .nav_items li.activePos {
+    /*background-color: var(--primColor);
+    transition: 0.3s;*/
+    background-size: 100% 100%;
+} 
 
 .arrowUp {
     width: 100px;
@@ -339,4 +351,9 @@ footer {
     color: #fff;
     border: 2px solid #fff;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
+.dark-theme .nav_items li {
+    background: linear-gradient(transparent 46px, #fff 46px, #fff 50px, transparent 30px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
 }

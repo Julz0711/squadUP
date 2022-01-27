@@ -7,6 +7,8 @@
     background-image: url("../bgImages/1.png");
     background-position-x: left;
     background-size: cover;
+    background-attachment: fixed;
+    height: auto;
 }
 .eve_upcoming {
     width: 70%;

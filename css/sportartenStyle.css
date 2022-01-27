@@ -18,7 +18,6 @@
     margin: 32px 25px;
     padding: 50px;
     background: var(--primColor);
-    /*border: 2px solid var(--primColor);*/
     border-radius: 0px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
@@ -41,7 +40,7 @@
         flex-direction: row;
     }
     .spa_container {
-        height: 550px;
+        height: 450px;
         width: 250px;
     }
 }

@@ -22,7 +22,7 @@ if (isset($_POST['email']) && $_POST['email'] != '') {
 
 
     mail($email_to_host, $subject, $body);
-    //mail($email_to_client, $subject, $body_client);
+    mail($email_to_client, $subject, $body_client);
 
     $message_sent = true;
 }
@@ -64,16 +64,12 @@ if (isset($_POST['email']) && $_POST['email'] != '') {
         <ul id="nav_menu">
             <li class="nav_logo"><a href="index.php#intro" id="logoChange" class="logoLM"></a></li>
             <div class="nav_items">
-                <li><a class="nav_link" href="index.php#produkt">Produkt</a></li>
+                <li><a class="nav_link" href="index.php#product">Produkt</a></li>
                 <li><a class="nav_link" href="index.php#sportarten">Sportarten</a></li>
                 <li><a class="nav_link" href="index.php#events">Events</a></li>
                 <li><a class="nav_link" href="index.php#aboutUs">Über Uns</a></li>
                 <li><a class="nav_link" href="#">Kontakt</a></li>
                 <hr>
-                <div class="nav_logout_wrapper">
-                    <a href="../php/register.php" class="signInOutBtn">Registrieren</a>
-                    <a href="../php/login.php" class="signInOutBtn">Anmelden</a>
-                </div>
             </div>
             <li class="nav_dm_toggle" onclick="toggleTheme()">
                 <div id="dm-li" class="sunV2"></div>
@@ -105,8 +101,8 @@ if (isset($_POST['email']) && $_POST['email'] != '') {
 
             <section id="contact">
 
-                <h1 class="section_header">Kontakt</h1>
-                <h3 class="section_subheader">Sende uns gerne dein Anliegen und wir werden uns so schnell wie
+                <h1 class="sec_header">Kontakt</h1>
+                <h3 class="sec_subheader">Sende uns gerne dein Anliegen und wir werden uns so schnell wie
                     möglich bei Ihnen melden. Wir freuen uns auch über jedes Feedback!
                 </h3>
 

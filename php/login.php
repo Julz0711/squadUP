@@ -74,7 +74,7 @@ endif;
         <ul id="nav_menu">
             <li class="nav_logo"><a href="../html/index.php#intro" id="logoChange" class="logoLM"></a></li>
             <div class="nav_items">
-                <li><a class="nav_link" href="../html/index.php#produkt">Produkt</a></li>
+                <li><a class="nav_link" href="../html/index.php#product">Produkt</a></li>
                 <li><a class="nav_link" href="../html/index.php#sportarten">Sportarten</a></li>
                 <li><a class="nav_link" href="../html/index.php#events">Events</a></li>
                 <li><a class="nav_link" href="../html/index.php#aboutUs">Über Uns</a></li>
@@ -100,7 +100,7 @@ endif;
             <div class="register_wrapper">
 
                 <h1 class="sec_header">Login</h1>
-                <h3 class="sec_subheader">Melde dich bei deinem squadUP Konto ein!</h3>
+                <h3 class="sec_subheader">Melde dich bei deinem squadUP Konto an!</h3>
 
                 <div class="formular">
 

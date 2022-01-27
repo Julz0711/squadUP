@@ -1,9 +1,9 @@
 <?php
-    session_start();
+session_start();
 
-    if(isset($_SESSION['username'])):
-        header("Location: ../php/indexSession.php");
-    endif;
+if (isset($_SESSION['username'])) :
+    header("Location: ../php/indexSession.php");
+endif;
 ?>
 <html lang="de">
 
@@ -29,9 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
     <!-- Libraries from the Web -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="shortcut icon" type="image/x-icon" href="../logos/logoS.png">
@@ -49,12 +47,12 @@
     <nav>
 
         <ul id="nav_menu">
-            <li class="nav_logo"><a href="#intro" id="logoChange" class="logoLM"></a></li>
+            <li class="nav_logo" class="intro"><a href="#intro" id="logoChange" class="logoLM"></a></li>
             <div class="nav_items">
-                <li><a class="nav_link" href="#produkt">Produkt</a></li>
-                <li><a class="nav_link" href="#sportarten">Sportarten</a></li>
-                <li><a class="nav_link" href="#events">Events</a></li>
-                <li><a class="nav_link" href="#aboutUs">Über Uns</a></li>
+                <li class="product"><a class="nav_link" href="#product">Produkt</a></li>
+                <li class="sportarten"><a class="nav_link" href="#sportarten">Sportarten</a></li>
+                <li class="events"><a class="nav_link" href="#events">Events</a></li>
+                <li class="aboutUs"><a class="nav_link" href="#aboutUs">Über Uns</a></li>
                 <li><a class="nav_link" href="contact.php">Kontakt</a></li>
                 <hr>
                 <div class="nav_logout_wrapper">
@@ -62,7 +60,9 @@
                     <a href="../php/login.php" class="signInOutBtn">Anmelden</a>
                 </div>
             </div>
-            <li class="nav_dm_toggle" onclick="toggleTheme()"><div id="dm-li" class="sunV2"></div></li>
+            <li class="nav_dm_toggle" onclick="toggleTheme()">
+                <div id="dm-li" class="sunV2"></div>
+            </li>
             <li class="nav_toggle" id="tog-li"><i id="bars" class="fas fa-bars fa-lg"></i></li>
         </ul>
 
@@ -83,7 +83,7 @@
                         Überwinde Deinen Schweinehund!
                     </h1>
                     <h6 class="sub_cap">
-                        squadUP ist die App, um neue Sportsfreunde kennenzulernen und gemeinsam 
+                        squadUP ist die App, um neue Sportsfreunde kennenzulernen und gemeinsam
                         Spaß zu haben. Hol dir die kostenlose App noch heute und beginne deine Reise…
                     </h6>
                 </div>
@@ -104,18 +104,18 @@
 
 
         <!-- Produkt Section -->
-        <section id="produkt">
+        <section id="product">
 
             <div class="sec_app" id="brightness" data-aos="zoom-in-right" data-aos-duration="1000">
 
                 <div class="textbox">
                     <h4 class="text_left">
-                        Bleib motiviert! 
+                        Bleib motiviert!
                     </h4>
                     <p class="text_left">
-                        Dir fällt es schwer am Ball zu bleiben? Mit nur einem Klick findest du 
-                        deine Sportpartner*Innen. Zusammen sportlich sein macht nicht nur Spaß, 
-                        sondern fördert auch deine Gesunheit und dein Sozialbedürfnis! 
+                        Dir fällt es schwer am Ball zu bleiben? Mit nur einem Klick findest du
+                        deine Sportpartner*Innen. Zusammen sportlich sein macht nicht nur Spaß,
+                        sondern fördert auch deine Gesunheit und dein Sozialbedürfnis!
                         squadUP bringt euch zusammen.
                     </p>
                 </div>
@@ -137,8 +137,8 @@
                         Schließ’ dich an!
                     </h4>
                     <p class="text_right">
-                        squadUP zeigt dir Treffen in deiner Nähe an. Wo wirst du mitmachen? 
-                        Deine Möglichkeiten sind unbegrenzt. Jeder kann öffentliche Treffen in den 
+                        squadUP zeigt dir Treffen in deiner Nähe an. Wo wirst du mitmachen?
+                        Deine Möglichkeiten sind unbegrenzt. Jeder kann öffentliche Treffen in den
                         Kalender eintragen, zu denen alle zusagen können, die möchten.
                     </p>
                 </div>
@@ -152,9 +152,9 @@
                         Finde was du suchst!
                     </h4>
                     <p class="text_left">
-                        Benutze die Suchleiste und ihre vielen Filter um deine Sportarten, 
-                        als auch Treffen, schnell zu finden. Gefunden? Dann markiere sie mit 
-                        einem Sternchen, um sie schnell wiederzufinden. Richte die App ganz 
+                        Benutze die Suchleiste und ihre vielen Filter um deine Sportarten,
+                        als auch Treffen, schnell zu finden. Gefunden? Dann markiere sie mit
+                        einem Sternchen, um sie schnell wiederzufinden. Richte die App ganz
                         nach deinen Wünschen ein und pinne Treffen an deine Startseite.
                     </p>
                 </div>
@@ -176,10 +176,10 @@
                         Sammel Punkte!
                     </h4>
                     <p class="text_right">
-                        Nach einiger Zeit der Isolierung haben wir alle sozial einbußen müssen. 
-                        Ständige Isolierung senkt unser Sozialbedürfnis. Trefft euch in den 
-                        Turnhallen und Sportplätze ausgewählter Vereine und sammelt mit jeder 
-                        sportlichen Veranstaltung Punkte und holt euch Preise! 
+                        Nach einiger Zeit der Isolierung haben wir alle sozial einbußen müssen.
+                        Ständige Isolierung senkt unser Sozialbedürfnis. Trefft euch in den
+                        Turnhallen und Sportplätze ausgewählter Vereine und sammelt mit jeder
+                        sportlichen Veranstaltung Punkte und holt euch Preise!
                     </p>
                 </div>
 
@@ -187,7 +187,7 @@
         </section>
 
 
-        <section id="register">
+        <section id="product">
 
             <div class="register_wrapper">
 
@@ -201,6 +201,12 @@
                 </a>
 
                 <a href="../php/login.php" class="goLogin">Bereits Mitglied? Zum Login</a>
+                <!--
+                <img src="../icons/svgs/SVG/football.svg" width="64px" height="auto" class="sportIcons" id="footb">
+                <img src="../icons/svgs/SVG/basketball.svg" width="64px" height="auto" class="sportIcons" id="basketb">
+                <img src="../icons/svgs/SVG/volleyball.svg" width="64px" height="auto" class="sportIcons" id="volleyb">
+                <img src="../icons/svgs/SVG/tennis.svg" width="64px" height="auto" class="sportIcons" id="tennisb">
+                <img src="../icons/svgs/SVG/badminton.svg" width="64px" height="auto" class="sportIcons" id="federb">-->
             </div>
 
         </section>
@@ -209,11 +215,19 @@
         <section id="facts">
 
             <div class="facts_wrapper" id="brightness">
-                <div class="facts_container">
-                    <h3>Warum squadUP?</h3>
-                </div>
-            </div>
 
+                <div class="facts_container">
+
+                    <h3 class="fact_header">Wir wollen dir nicht nur dabei helfen neue Freunde zu finden.<br>
+                        Auch wenn wir uns sehr freuen wenn wir dich dabei unterstützen können.<br><br> Wir wollen vor allem, dass
+                        es unseren Mitmenchen nicht nur körperlich gut geht, sondern auch mental.
+                    </h3>
+
+                    <div id="graphicRef" class="graphic_container graphicUrlLM"></div>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -221,9 +235,12 @@
         <!-- Sportarten Section -->
         <section id="sportarten">
 
-            <div class="spa_catalog">
+            <div class="spa_catalog" id="brightness">
 
                 <h1 class="sec_header">Sportarten</h1>
+                <h3 class="sec_subheader">Du brauchst einen kleien Denkanstoß welche Sportarten ea alles so gibt?<br>
+                    Hier ist eine kleine Übersicht!
+                </h3>
 
                 <div class="spa_boxes">
 
@@ -250,9 +267,7 @@
                         <p class="spa_p">
                             Basketball ist ein technisch und taktisch anspruchsvolles Ballspiel, bei dem
                             zwei Mannschaften mit mindestens zwei Spielenden gegeneinander antreten. Ziel ist es,
-                            den Ball in den 3,05 Meter hohen Korb des Gegners zu werfen. Viele verschiedene
-                            Minispiele, wie das bekannte "HORSE", bei dem man Körbe des anderen imitieren muss,
-                            machen den Sport ebenfalls attraktiv.
+                            den Ball in den 3,05 Meter hohen Korb des Gegners zu werfen.
 
                         </p>
                     </div>
@@ -264,11 +279,10 @@
                             Spieler pro Team: 2 - 6
                         </p>
                         <p class="spa_p">
-                            Volleyball ist ein Ballspiel, das sowohl zu den Mannschafts- als auch zu den
-                            Rückschlagsportarten gehört. Zwei Teams mit mindestens je zwei Spielern baggern,
+                            Volleyball ist ein Ballspiel, bei dem zwei Teams mit mindestens je zwei Spielern, durch baggern,
                             pritschen oder schmettern den Ball "volley" über ein Netz in der Spielfeldmitte.
                             Ziel ist es, den Ball im gegnerischen Spielfeld auf den Boden zu befördern
-                            und so zu punkten. Die Beach-Volleyball Variante macht den Sport noch vielseitiger.
+                            und so zu punkten.
 
                         </p>
                     </div>
@@ -311,40 +325,8 @@
                             Tischtennis ist klassischerweise ein 1 gegen 1. Ähnlich wie beim Tennis wird versucht,
                             ein kleiner Ball am Gegner vorbei zuschlagen. Der große Unterschied ist allerdings,
                             dass wie der Name schon verrät an einem Tisch mit einem kleinen Netz in der Mitte gespielt
-                            wird. Auch die Schläger sind deutlich kleiner. Minispiele wie "Um die Platte" machen
-                            den Sport vielseitiger, da auch mehr als 2 Spieler teilnehmen können.
-
+                            wird.
                         </p>
-                    </div>
-
-                    <div class="spa_container">
-                        <h2 class="spa_header">Krafttraining</h2>
-                        <img src="../icons/svgs/SVG/excersice.svg" class="spa_icons">
-                        <p class="spa_p">
-                            Spieler pro Team: 1
-                        </p>
-                        <p class="spa_p">
-                            Durch Krafttraining und die entsprechenden Übungen wird die maximale Muskelkraft
-                            gesteigert. Die Trainingsreize wirken sich dabei auf die Schnellkraft
-                            (Kontraktionsfähigkeit der Muskeln) und die Kraftausdauer bei der Muskelbelastung aus.
-                            Ein attraktiver Körper ist ein Bonus obendrauf.
-
-                        </p>
-                    </div>
-
-                    <div class="spa_container">
-                        <h2 class="spa_header">und viele mehr</h2>
-                        <img src="../icons/svgs/SVG/skater.svg" class="spa_icons">
-                        <img src="../icons/svgs/SVG/runner.svg" class="spa_icons">
-                        <img src="../icons/svgs/SVG/handball.svg" class="spa_icons">
-                        <!--
-                        <p class="spa_p">
-                            Spieler pro Team: 4 - 11
-                        </p>
-                        <p class="spa_p">
-                            Warum der Sport Football heißt wird wohl niemand wissen, aber der USA-Nationalsport ist auch in Deutschland beliebt. 
-                        </p>
-                    -->
                     </div>
                 </div>
 
@@ -446,9 +428,9 @@
 
 
         <!-- Slideshow Section -->
-        <section id="past_events">
+        <section id="events">
 
-            <div class="eve_wrapper" id="brightness">
+            <div class="eve_wrapper">
 
                 <h3 class="sec_subheader" style="margin-top: 100px;">Hier kannst du ein paar schöne Momente vergangener
                     Events betrachten. Hoffentlich
@@ -514,7 +496,7 @@
 
 
 
-        <section id="feedback">
+        <section id="events">
 
             <div class="feedback_container" id="brightness">
 
@@ -655,8 +637,7 @@
 
         <footer>
             <div class="social_media">
-                <a href="https://www.instagram.com/cursedcvdmemes/"><i id="footer_Icon"
-                        class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.instagram.com/cursedcvdmemes/"><i id="footer_Icon" class="fab fa-instagram fa-lg"></i></a>
                 <a href="#"><i id="footer_Icon" class="fab fa-twitter fa-lg"></i></a>
                 <a href="#"><i id="footer_Icon" class="fab fa-facebook fa-lg"></i></a>
                 <a href="#"><i id="footer_Icon" class="fab fa-app-store fa-lg"></i></a>
@@ -672,7 +653,7 @@
 
 
     <!-- Footer -->
-    
+
 
 
     <script src="../javascript/indexJS.js"></script>
