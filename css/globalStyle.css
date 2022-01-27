@@ -224,7 +224,7 @@ nav hr {
 nav ul .nav_items li.activePos {
     /*background-color: var(--primColor);
     transition: 0.3s;*/
-    background-size: 100% 100%;
+    text-decoration: underline;
 } 
 
 .arrowUp {
@@ -315,6 +315,12 @@ footer {
         font-size: 1.5rem;
         margin-right: 10px;
     }
+    nav ul .nav_items li.activePos {
+        /*background-color: var(--primColor);
+        transition: 0.3s;*/
+        background-size: 100% 100%;
+        text-decoration: none;
+    } 
 }
 
 /* all .dark-theme changes */

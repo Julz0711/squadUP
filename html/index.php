@@ -32,7 +32,7 @@ endif;
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoS.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoLMV2.svg">
 
     <!-- Script from the Web -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -212,9 +212,9 @@ endif;
         </section>
 
 
-        <section id="facts">
+        <section id="product">
 
-            <div class="facts_wrapper" id="brightness">
+            <div class="facts_wrapper">
 
                 <div class="facts_container">
 
@@ -657,6 +657,7 @@ endif;
 
 
     <script src="../javascript/indexJS.js"></script>
+    <script src="../javascript/mobileMenu.js"></script>
 
     <!-- Script from the Web -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

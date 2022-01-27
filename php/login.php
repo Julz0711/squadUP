@@ -1,10 +1,6 @@
 <?php
 session_start();
 
-if (isset($_SESSION['username'])) :
-    header("Location: indexSession.php");
-endif;
-
 require("connect.php");
 
 if (isset($_POST["submit"])) :
@@ -26,6 +22,7 @@ if (isset($_POST["submit"])) :
     if ($active->num_rows == 1) :
         $object_query = $active->fetch_object();
         $_SESSION['username'] = $object_query->username;
+        header("Location: indexSession.php");
     else :
         echo '<span class="phpStyle">' . 'Deine Angaben sind leider nicht korrekt.' . '</span>';
     endif;
@@ -49,7 +46,7 @@ endif;
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoS.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoLMV2.svg">
 
     <!-- Script from the Web -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -72,7 +69,7 @@ endif;
     <nav>
 
         <ul id="nav_menu">
-            <li class="nav_logo"><a href="../html/index.php#intro" id="logoChange" class="logoLM"></a></li>
+            <li class="nav_logo" class="../html/index.phpintro"><a href="#intro" id="logoChange" class="logoLM"></a></li>
             <div class="nav_items">
                 <li><a class="nav_link" href="../html/index.php#product">Produkt</a></li>
                 <li><a class="nav_link" href="../html/index.php#sportarten">Sportarten</a></li>
@@ -132,8 +129,8 @@ endif;
         <p claas="p_footer"><i class="fa fa-copyright"></i> Copyright 2021</p>
     </footer>
 
-
-    <script src="../javascript/indexJS.js"></script>
+    <script src="../javascript/darkMode.js"></script>
+    <script src="../javascript/mobileMenu.js"></script>
 
     <!-- Script from the Web -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

@@ -6,19 +6,24 @@
     align-items: center;
     margin:0;
     padding:0;
+    
+    background-image: url("../bgImages/4.png");
+    background-position-x: left;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
 }
 .formular {
     padding: 16px;
     width: 550px;
     text-align: left;
+    background: #fff;
     margin: 64px;
     margin-top: 0;
     padding: 64px;
-    background: #fff;
     border-radius: 0px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-
 input[type=text], input[type=password], input[type=email] {
     text-align: left;
     width: 530px;

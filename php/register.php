@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoS.png" >
+    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoLMV2.svg">
 
     <!-- Script from the Web -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -158,7 +158,8 @@
     </footer>
 
 
-    <script src="../javascript/indexJS.js"></script>
+    <script src="../javascript/darkMode.js"></script>
+    <script src="../javascript/mobileMenu.js"></script>
 
     <!-- Script from the Web -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

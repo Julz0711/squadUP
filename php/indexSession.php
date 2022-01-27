@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['username'])) :
     header("Location: ../html/index.php");
 endif;
@@ -29,7 +30,7 @@ endif;
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoS.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../logos/logoLMV2.svg">
 
     <!-- Script from the Web -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -182,9 +183,9 @@ endif;
             </div>
         </section>
 
-        <section id="facts">
+        <section id="product">
 
-            <div class="facts_wrapper" id="brightness">
+            <div class="facts_wrapper">
 
                 <div class="facts_container">
 
@@ -527,7 +528,7 @@ endif;
                     <!--       Wir sind ein junges Unternehmen, das sich aufgrund einer Aufgabenstellung im Studium
                         zusammengefunden hatte. <br>
                         Die genannte Aufgabe beinhaltete sich Gedanken zu einem Produkt zu machen, das sich mit der Gesundheit beschäftigt, <br> 
-                        damit wir Logos, Zielgruppen und das Entwickeln einer passenden Website zu verinnerlichen lernen. <br> <br>
+                        damit wir var(--dm-secondColor), Zielgruppen und das Entwickeln einer passenden Website zu verinnerlichen lernen. <br> <br>
                  -->
                     Wir sind drei junge Studenten mit der Mission, Menschen mit psychischen oder körperlichen Problemen
                     für sportliche Tätigkeiten zu motivieren. <br><br>
@@ -626,7 +627,8 @@ endif;
 
 
 
-    <script src="../javascript/indexJS.js"></script>
+    <script src="../javascript/indexJs.js"></script>
+    <script src="../javascript/mobileMenu.js"></script>
 
     <!-- Script from the Web -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

@@ -9,10 +9,10 @@ function toggleTheme() {
             document.body.classList.remove('dark-theme');
             document.getElementById("dm-li").classList.add('sunV2');
             document.getElementById("dm-li").classList.remove('moonV2');
-            document.getElementById("graphicRef").classList.add('graphicUrlLM');
-            document.getElementById("graphicRef").classList.remove('graphicUrlDM');
             document.getElementById("logoChange").classList.add('logoLM');
             document.getElementById("logoChange").classList.remove('logoDM');
+            document.getElementById("graphicRef").classList.add('graphicUrlLM');
+            document.getElementById("graphicRef").classList.remove('graphicUrlDM');
             document.getElementById("tog-li").innerHTML = "<i id='bars' class='fas fa-bars fa-lg'></i>";
         }
     }
@@ -23,27 +23,25 @@ function toggleTheme() {
             document.body.classList.add('dark-theme');
             document.getElementById("dm-li").classList.remove('sunV2');
             document.getElementById("dm-li").classList.add('moonV2');
-            document.getElementById("graphicRef").classList.remove('graphicUrlLM');
-            document.getElementById("graphicRef").classList.add('graphicUrlDM');
             document.getElementById("logoChange").classList.remove('logoLM');
             document.getElementById("logoChange").classList.add('logoDM');
             document.getElementById("tog-li").innerHTML = "<i id='bars' class='fas fa-bars fa-lg'></i>";
+            document.getElementById("graphicRef").classList.remove('graphicUrlLM');
+            document.getElementById("graphicRef").classList.add('graphicUrlDM');
         }
     }
 }
-
 
 //safe darkmode to local storage
 if (localStorage.getItem('isDarkMode') === 'true') {
     document.body.classList.add('dark-theme');
     document.getElementById("dm-li").classList.remove('sunV2');
     document.getElementById("dm-li").classList.add('moonV2');
-    document.getElementById("graphicRef").classList.remove('graphicUrlLM');
-    document.getElementById("graphicRef").classList.add('graphicUrlDM');
     document.getElementById("logoChange").classList.remove('logoLM');
     document.getElementById("logoChange").classList.add('logoDM');
+    document.getElementById("graphicRef").classList.remove('graphicUrlLM');
+    document.getElementById("graphicRef").classList.add('graphicUrlDM');
 }
-
 
 
 // Slideshow show current Slide 
@@ -83,36 +81,23 @@ window.onbeforeunload = function () {
 }
 
 
-// Mobile Menu open menu
-$(function () {
-    $(".nav_toggle").on("click", function () {
-        if ($(".nav_items").hasClass("active")) {
-            $(".nav_items").removeClass("active");
-        }
-        else {
-            $(".nav_items").addClass("active");
-        }
-    })
-});
-
-
 //show active nav position in index
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul .nav_items li');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach( section => {
+    sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if(pageYOffset >= (sectionTop - sectionHeight / 3)){
+        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
             current = section.getAttribute('id');
         }
     })
 
-    navLi.forEach( li => {
+    navLi.forEach(li => {
         li.classList.remove('activePos');
-        if(li.classList.contains(current)) {
+        if (li.classList.contains(current)) {
             li.classList.add('activePos');
         }
     })
