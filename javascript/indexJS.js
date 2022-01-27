@@ -108,5 +108,9 @@ window.addEventListener('scroll', () => {
 var win = $(window);
 win.scroll(function () {
     $(".sec_1").css("background-position-y", win.scrollTop() / 2 + "px");
-    $("#footb").css("transform", "translate(700px,-650px) rotate(" + win.scrollTop() / 2 + ")");
+    $(".footb").css("transform", "translateY(580px) rotate(" + win.scrollTop() / 10 + "deg) scale(" + win.scrollTop() / 1500 + ")");
+    $(".basketb").css("transform", "translateY(200px) rotate(" + win.scrollTop() / 12 + "deg) scale(" + win.scrollTop() / 1600 + ")");
+    $(".volleyb").css("transform", "translateY(150px) rotate(" + win.scrollTop() / 14 + "deg) scale(" + win.scrollTop() / 1700 + ")");
+    $(".tennisb").css("transform", "translateY(420px) rotate(" + win.scrollTop() / 15 + "deg) scale(" + win.scrollTop() / 1650 + ")");
+    $(".federb").css("transform", "translateY(600px) rotate(" + win.scrollTop() / 14 + "deg) scale(" + win.scrollTop() / 1750 + ")");
 })

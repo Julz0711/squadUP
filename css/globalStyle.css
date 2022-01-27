@@ -16,7 +16,7 @@
 /* -- Basics -- */
 
 * {
-    font-family: comfortaa, sans-serif;
+    font-family: comfortaa, Arial, sans-serif;
     text-align: center;
 }
 html {
@@ -33,6 +33,7 @@ body {
 }
 main {
     margin-top: 100px;
+    width: 100%;
 }
 .sec_header {
     font-size: 3rem;
@@ -40,12 +41,13 @@ main {
     padding-top: 64px;
     padding-bottom: 0;
     font-family: 'Graduate', comfortaa, sans-serif, bold;
+    overflow: hidden;
 }
 .sec_subheader {
     max-width: 900px;
     font-size: 1.25rem;
     padding: 32px;
-    padding-top: 0;
+    padding-top: 16px;
     margin-bottom: 64px;
     margin-top: -16px;
 }
@@ -91,9 +93,9 @@ main {
     cursor: pointer;
 }
 .logoLM {
-    background-image: url("../logos/logoLMV2.svg");
+    background-image: url("../logos/logoLMV2.png");
     background-size: cover;
-    width: 135px;
+    width: 150px;
     height: 41px;
     margin: 16px;
 }
@@ -103,9 +105,9 @@ main {
     transition: .1s;
 }
 .logoDM {
-    background-image: url("../logos/logoDMV2.svg");
+    background-image: url("../logos/logoDMV2.png");
     background-size: cover;
-    width: 135px;
+    width: 150px;
     height: 41px;
     margin: 16px;
 }
@@ -322,6 +324,15 @@ footer {
         text-decoration: none;
     } 
 }
+@media all and (max-width: 550px) {
+    .sec_header {
+        font-size: 2rem;
+    }
+    .sec_subheader {
+        font-size: 1.4rem;
+    }
+}
+
 
 /* all .dark-theme changes */
 /* nav */

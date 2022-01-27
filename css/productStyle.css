@@ -113,27 +113,6 @@
 }
 
 
-.sportIcons {
-    position: relative;
-    filter: blur(1px);
-    filter: grayscale(50%);
-}
-#footb {
-    transform: translate(700px,-650px);
-}
-#basketb {
-    transform: translate(-800px,-600px);
-}
-#volleyb {
-    transform: translate(-450px,-300px);
-}
-#tennisb {
-    transform: translate(100px,-1000px);
-}
-#federb {
-    transform: translate(500px,-500px);
-}
-
 
 
 /* -- Desktop View -- */
@@ -176,6 +155,23 @@
     }
     .picbox {
         order: 2;
+    }
+    .main_cap {
+        font-size: 2rem;
+    }
+}
+@media all and (max-width: 420px) {
+    .textbox {
+        order: 1;
+    }
+    .picbox {
+        order: 2;
+    }
+    .main_cap {
+        font-size: 1.6rem;
+    }
+    .sub_cap {
+        font-size: 1.2rem;
     }
 }
 

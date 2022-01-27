@@ -74,7 +74,7 @@ endif;
 
         <!-- Landing Page -->
         <section id="intro">
-
+            
             <div class="sec_1">
 
                 <div class="captions">
@@ -105,33 +105,30 @@ endif;
 
         <!-- Produkt Section -->
         <section id="product">
+            <div id="brightness">
+                <div class="sec_app" data-aos="zoom-in-right" data-aos-duration="1000">
+                    <div class="textbox">
+                        <h4 class="text_left">
+                            Bleib motiviert!
+                        </h4>
+                        <p class="text_left">
+                            Dir fällt es schwer am Ball zu bleiben? Mit nur einem Klick findest du
+                            deine Sportpartner*Innen. Zusammen sportlich sein macht nicht nur Spaß,
+                            sondern fördert auch deine Gesunheit und dein Sozialbedürfnis!
+                            squadUP bringt euch zusammen.
+                        </p>
+                    </div>
+                    <div class="picbox">
+                        <img class="sec_pics" src="../pics/football.png">
+                    </div>
 
-            <div class="sec_app" id="brightness" data-aos="zoom-in-right" data-aos-duration="1000">
-
-                <div class="textbox">
-                    <h4 class="text_left">
-                        Bleib motiviert!
-                    </h4>
-                    <p class="text_left">
-                        Dir fällt es schwer am Ball zu bleiben? Mit nur einem Klick findest du
-                        deine Sportpartner*Innen. Zusammen sportlich sein macht nicht nur Spaß,
-                        sondern fördert auch deine Gesunheit und dein Sozialbedürfnis!
-                        squadUP bringt euch zusammen.
-                    </p>
                 </div>
-
-                <div class="picbox">
-                    <img class="sec_pics" src="../pics/football.png">
-                </div>
-
             </div>
 
             <div class="sec_app" data-aos="zoom-in-left" data-aos-duration="1000">
-
                 <div class="picbox">
                     <img class="sec_pics" src="../pics/volleyball.png">
                 </div>
-
                 <div class="textbox">
                     <h4 class="text_right">
                         Schließ’ dich an!
@@ -142,35 +139,30 @@ endif;
                         Kalender eintragen, zu denen alle zusagen können, die möchten.
                     </p>
                 </div>
-
             </div>
-
-            <div class="sec_app" id="brightness" data-aos="zoom-in-right" data-aos-duration="1000">
-
-                <div class="textbox">
-                    <h4 class="text_left">
-                        Finde was du suchst!
-                    </h4>
-                    <p class="text_left">
-                        Benutze die Suchleiste und ihre vielen Filter um deine Sportarten,
-                        als auch Treffen, schnell zu finden. Gefunden? Dann markiere sie mit
-                        einem Sternchen, um sie schnell wiederzufinden. Richte die App ganz
-                        nach deinen Wünschen ein und pinne Treffen an deine Startseite.
-                    </p>
+            <div id="brightness">
+                <div class="sec_app" data-aos="zoom-in-right" data-aos-duration="1000">
+                    <div class="textbox">
+                        <h4 class="text_left">
+                            Finde was du suchst!
+                        </h4>
+                        <p class="text_left">
+                            Benutze die Suchleiste und ihre vielen Filter um deine Sportarten,
+                            als auch Treffen, schnell zu finden. Gefunden? Dann markiere sie mit
+                            einem Sternchen, um sie schnell wiederzufinden. Richte die App ganz
+                            nach deinen Wünschen ein und pinne Treffen an deine Startseite.
+                        </p>
+                    </div>
+                    <div class="picbox">
+                        <img class="sec_pics" src="../pics/badmintonRainbow.png">
+                    </div>
                 </div>
-
-                <div class="picbox">
-                    <img class="sec_pics" src="../pics/badmintonRainbow.png">
-                </div>
-
             </div>
 
             <div class="sec_app" data-aos="zoom-in-left" data-aos-duration="1000">
-
                 <div class="picbox">
                     <img class="sec_pics" src="../pics/basketball.png">
                 </div>
-
                 <div class="textbox">
                     <h4 class="text_right">
                         Sammel Punkte!
@@ -182,15 +174,12 @@ endif;
                         sportlichen Veranstaltung Punkte und holt euch Preise!
                     </p>
                 </div>
-
             </div>
         </section>
 
 
         <section id="product">
-
             <div class="register_wrapper">
-
                 <h1 class="sec_header">Du willst Teil einer großartigen Community werden?</h1>
                 <h3 class="sec_subheader" style="margin-top:32px;">Erstelle kostenlos in sekundenschnelle deinen
                     persönlichen
@@ -201,34 +190,26 @@ endif;
                 </a>
 
                 <a href="../php/login.php" class="goLogin">Bereits Mitglied? Zum Login</a>
-                <!--
-                <img src="../icons/svgs/SVG/football.svg" width="64px" height="auto" class="sportIcons" id="footb">
-                <img src="../icons/svgs/SVG/basketball.svg" width="64px" height="auto" class="sportIcons" id="basketb">
-                <img src="../icons/svgs/SVG/volleyball.svg" width="64px" height="auto" class="sportIcons" id="volleyb">
-                <img src="../icons/svgs/SVG/tennis.svg" width="64px" height="auto" class="sportIcons" id="tennisb">
-                <img src="../icons/svgs/SVG/badminton.svg" width="64px" height="auto" class="sportIcons" id="federb">-->
-            </div>
 
+                <img src="../icons/svgs/SVG/handball.svg" width="40px" height="auto" class="sportIcons footb">
+                <img src="../icons/svgs/SVG/badminton.svg" width="40px" height="auto" class="sportIcons basketb">
+                <img src="../icons/svgs/SVG/volleyball.svg" width="40px" height="auto" class="sportIcons volleyb">
+                <img src="../icons/svgs/SVG/excersice.svg" width="40px" height="auto" class="sportIcons tennisb">
+                <img src="../icons/svgs/SVG/basketball.svg" width="40px" height="auto" class="sportIcons federb">
+            </div>
         </section>
 
 
         <section id="product">
-
             <div class="facts_wrapper">
-
                 <div class="facts_container">
-
                     <h3 class="fact_header">Wir wollen dir nicht nur dabei helfen neue Freunde zu finden.<br>
                         Auch wenn wir uns sehr freuen wenn wir dich dabei unterstützen können.<br><br> Wir wollen vor allem, dass
                         es unseren Mitmenchen nicht nur körperlich gut geht, sondern auch mental.
                     </h3>
-
                     <div id="graphicRef" class="graphic_container graphicUrlLM"></div>
-
                 </div>
-
             </div>
-
         </section>
 
 
@@ -238,7 +219,7 @@ endif;
             <div class="spa_catalog" id="brightness">
 
                 <h1 class="sec_header">Sportarten</h1>
-                <h3 class="sec_subheader">Du brauchst einen kleien Denkanstoß welche Sportarten ea alles so gibt?<br>
+                <h3 class="sec_subheader">Du brauchst einen kleinen Denkanstoß welche Sportarten es alles so gibt?<br>
                     Hier ist eine kleine Übersicht!
                 </h3>
 
@@ -540,8 +521,8 @@ endif;
                         <p>24.12.2021</p>
                     </div>
 
-                    <p class="fb_text">Ich habe schon viele neue Freunde gefunden die auch gerne Volleyball spielen,
-                        hätte nicht gedacht, dass es so noch soviele gibt :D!
+                    <p class="fb_text">Ich habe schon viele neue Freunde gefunden die auch gerne Volleyball spielen.
+                        Hätte nicht gedacht, dass es so soviele gibt :D!
                     </p>
                 </div>
 

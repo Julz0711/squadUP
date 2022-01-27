@@ -51,6 +51,40 @@ h3 {
     cursor: pointer;
 }
 
+.sportIcons {
+    display: block;
+    position: absolute;
+    filter: grayscale(100%) blur(1px);
+}
+.footb {
+    right: 13%;
+}
+.basketb {
+    right: 10%;
+}
+.volleyb {
+    left: 11%;
+}
+.tennisb {
+    left:6%;
+}
+.federb {
+    left: 21%;
+}
+
+
+
+@media all and (max-width: 550px) {
+    .registerBt {
+        width: 80%;
+    }
+}
+@media all and (max-width: 1150px) {
+    .sportIcons {
+        display: none;
+    }
+}
+
 
 /* .dark-theme changes */
 .dark-theme .registerBt {
