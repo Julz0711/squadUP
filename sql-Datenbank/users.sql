@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 25. Jan 2022 um 23:57
+-- Erstellungszeit: 28. Jan 2022 um 13:34
 -- Server-Version: 10.4.22-MariaDB
 -- PHP-Version: 8.1.1
 
@@ -41,14 +41,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `age`, `postalcode`) VALUES
-(7, 'Julz', 'test@test.com', 'cc03e747a6afbbcbf8be7668acfebe', 22, 59555),
-(8, 'Frey', 'frey@frey.de', '202cb962ac59075b964b07152d234b', 20, 59555),
-(9, 'test', 'test3@test.com', '333', 33, 33333),
 (10, 'Markus', 'test5@test.com', 'test123', 69, 69420),
-(11, 'test44', '444@4.de', '444', 44, 44444),
-(12, 'test5', '55@5.de', '555', 55, 55555),
-(13, 'test6', '66@6.de', '666', 66, 66666),
-(14, 'test7', '7@7.de', '777', 77, 77777);
+(14, 'test7', '7@7.de', '777', 77, 77777),
+(18, 'Julz', 'julian.gutknecht@stud.hshl.de', 'cc03e747a6afbbcbf8be7668acfebe', 23, 59555),
+(20, 'test4', '444@4.de', '$2y$10$y67PluGbyQ7.eMafGlojGOx', 444, 44444);
 
 --
 -- Indizes der exportierten Tabellen
@@ -68,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

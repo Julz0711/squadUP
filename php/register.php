@@ -98,9 +98,9 @@
                                 if($user_result->num_rows == 0):
                                     if($password == $password_repeat):
 
-                                        //$password = md5($password);
+                                        //$hashed_password = password_hash($pasword, PASSWORD_DEFAULT);
                                         $insert = $conn->prepare("INSERT INTO users(username, email, password, age, postalcode) VALUES (?,?,?,?,?)");
-                                        $insert->bind_param('sssii', $username, $email, $password, $age, $postalcode);
+                                        $insert->bind_param('sssii', $username, $email, $hashed_password, $age, $postalcode);
                                         $insert->execute();
                                         if ($insert !== false):
                                             echo '<span class="phpStyle">' . 'YEAH!' . '</span>';

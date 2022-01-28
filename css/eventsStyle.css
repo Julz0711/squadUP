@@ -213,7 +213,6 @@
         transform: translateY(-160px);
         font-size: 80px;
     }
-
 }
 
 @media all and (min-width: 1064px) {
@@ -238,6 +237,17 @@
     .slider_arrow {
         width: 10%;
         transform: translateY(-280px);
+    }
+}
+@media all and (max-width: 450px) {
+    .slideshow_wrapper {
+        width: 90%;
+        padding: 16px;
+        margin-top: 300px;
+        box-shadow: none;
+    }
+    .eve_wrapper {
+        height: 700px;
     }
 }
 

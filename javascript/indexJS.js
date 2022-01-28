@@ -14,6 +14,11 @@ function toggleTheme() {
             document.getElementById("graphicRef").classList.add('graphicUrlLM');
             document.getElementById("graphicRef").classList.remove('graphicUrlDM');
             document.getElementById("tog-li").innerHTML = "<i id='bars' class='fas fa-bars fa-lg'></i>";
+
+            document.getElementById("pic1").src = "../pics/SVG/grafics2_picbox1.svg";
+            document.getElementById("pic2").src = "../pics/SVG/grafics2_picbox2.svg";
+            document.getElementById("pic3").src = "../pics/SVG/grafics2_picbox3.svg";
+            document.getElementById("pic4").src = "../pics/SVG/grafics2_picbox4.svg";
         }
     }
     else {
@@ -28,6 +33,11 @@ function toggleTheme() {
             document.getElementById("tog-li").innerHTML = "<i id='bars' class='fas fa-bars fa-lg'></i>";
             document.getElementById("graphicRef").classList.remove('graphicUrlLM');
             document.getElementById("graphicRef").classList.add('graphicUrlDM');
+
+            document.getElementById("pic1").src = "../pics/SVG/grafics2_picbox1dm.svg";
+            document.getElementById("pic2").src = "../pics/SVG/grafics2_picbox2dm.svg";
+            document.getElementById("pic3").src = "../pics/SVG/grafics2_picbox3dm.svg";
+            document.getElementById("pic4").src = "../pics/SVG/grafics2_picbox4dm.svg";
         }
     }
 }
@@ -41,6 +51,11 @@ if (localStorage.getItem('isDarkMode') === 'true') {
     document.getElementById("logoChange").classList.add('logoDM');
     document.getElementById("graphicRef").classList.remove('graphicUrlLM');
     document.getElementById("graphicRef").classList.add('graphicUrlDM');
+
+    document.getElementById("pic1").src = "../pics/SVG/grafics2_picbox1dm.svg";
+    document.getElementById("pic2").src = "../pics/SVG/grafics2_picbox2dm.svg";
+    document.getElementById("pic3").src = "../pics/SVG/grafics2_picbox3dm.svg";
+    document.getElementById("pic4").src = "../pics/SVG/grafics2_picbox4dm.svg";
 }
 
 

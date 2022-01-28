@@ -48,10 +48,10 @@ endif;
         <ul id="nav_menu">
             <li class="nav_logo"><a href="#intro" id="logoChange" class="logoLM"></a></li>
             <div class="nav_items">
-                <li><a class="nav_link" href="#product">Produkt</a></li>
-                <li><a class="nav_link" href="#sportarten">Sportarten</a></li>
-                <li><a class="nav_link" href="#events">Events</a></li>
-                <li><a class="nav_link" href="#aboutUs">Über Uns</a></li>
+                <li class="product"><a class="nav_link" href="#product">Produkt</a></li>
+                <li class="sportarten"><a class="nav_link" href="#sportarten">Sportarten</a></li>
+                <li class="events"><a class="nav_link" href="#events">Events</a></li>
+                <li class="aboutUs"><a class="nav_link" href="#aboutUs">Über Uns</a></li>
                 <li><a class="nav_link" href="../html/contact.php">Kontakt</a></li>
                 <hr>
                 <div class="nav_logout_wrapper">
@@ -113,12 +113,12 @@ endif;
                         <p class="text_left">
                             Dir fällt es schwer am Ball zu bleiben? Mit nur einem Klick findest du
                             deine Sportpartner*Innen. Zusammen sportlich sein macht nicht nur Spaß,
-                            sondern fördert auch deine Gesunheit und dein Sozialbedürfnis!
+                            sondern fördert auch deine Gesundheit und dein Sozialbedürfnis!
                             squadUP bringt euch zusammen.
                         </p>
                     </div>
                     <div class="picbox">
-                        <img class="sec_pics" src="../pics/football.png">
+                        <img class="sec_pics" id="pic1" src="../pics/SVG/grafics2_picbox1.svg">
                     </div>
 
                 </div>
@@ -126,7 +126,7 @@ endif;
 
             <div class="sec_app" data-aos="zoom-in-left" data-aos-duration="1000">
                 <div class="picbox">
-                    <img class="sec_pics" src="../pics/volleyball.png">
+                    <img class="sec_pics" id="pic2" src="../pics/SVG/grafics2_picbox2.svg">
                 </div>
                 <div class="textbox">
                     <h4 class="text_right">
@@ -153,14 +153,14 @@ endif;
                         </p>
                     </div>
                     <div class="picbox">
-                        <img class="sec_pics" src="../pics/badmintonRainbow.png">
+                        <img class="sec_pics" id="pic3" src="../pics/SVG/grafics2_picbox3.svg">
                     </div>
                 </div>
             </div>
 
             <div class="sec_app" data-aos="zoom-in-left" data-aos-duration="1000">
                 <div class="picbox">
-                    <img class="sec_pics" src="../pics/basketball.png">
+                    <img class="sec_pics" id="pic4" src="../pics/SVG/grafics2_picbox4.svg">
                 </div>
                 <div class="textbox">
                     <h4 class="text_right">
@@ -449,6 +449,7 @@ endif;
         </section>
 
 
+        <!-- Kundenrezensionen -->
         <section id="events">
 
             <div class="feedback_container" id="brightness">
@@ -511,11 +512,6 @@ endif;
                 <h1 class="sec_header">Über uns</h1>
 
                 <div class="au_text">
-                    <!--       Wir sind ein junges Unternehmen, das sich aufgrund einer Aufgabenstellung im Studium
-                        zusammengefunden hatte. <br>
-                        Die genannte Aufgabe beinhaltete sich Gedanken zu einem Produkt zu machen, das sich mit der Gesundheit beschäftigt, <br> 
-                        damit wir var(--dm-secondColor), Zielgruppen und das Entwickeln einer passenden Website zu verinnerlichen lernen. <br> <br>
-                 -->
                     Wir sind drei junge Studenten mit der Mission, Menschen mit psychischen oder körperlichen Problemen
                     für sportliche Tätigkeiten zu motivieren. <br><br>
                     Immer mehr Menschen fehlt es an sozialer Bindung, haben jedoch das Verlangen sich mit Leuten zu
@@ -534,9 +530,9 @@ endif;
                         <div class="au_name">Vanessa Frey</div>
                         <div class="au_desc">squadUP CEO</div>
                         <div class="au_about">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quasi vero reiciendis tempore animi nesciunt voluptatem
-                            corporis quos labore laborum.
+                            21, geboren in Elmshorn<br>
+                            Student an der HSHL<br>
+                            Computer Visualistik und Design<br>
                         </div>
                         <div class="au_social">
                             <a href="#"><i id="au_icon" class="fab fa-instagram fa-lg"></i></a>
@@ -551,9 +547,9 @@ endif;
                         <div class="au_name">Julian Gutknecht</div>
                         <div class="au_desc">squadUP CEO</div>
                         <div class="au_about">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quasi vero reiciendis tempore animi nesciunt voluptatem
-                            corporis quos labore laborum.
+                            23, geboren in Stuttgart<br>
+                            Student an der HSHL<br>
+                            Computer Visualistik und Design<br>
                         </div>
                         <div class="au_social">
                             <a href="#"><i id="au_icon" class="fab fa-instagram fa-lg"></i></a>
@@ -568,9 +564,9 @@ endif;
                         <div class="au_name">Niklas Puls</div>
                         <div class="au_desc">squadUP CEO</div>
                         <div class="au_about">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quasi vero reiciendis tempore animi nesciunt voluptatem
-                            corporis quos labore laborum.
+                            19, geboren in Bremen<br>
+                            Student an der HSHL<br>
+                            Computer Visualistik und Design<br>
                         </div>
                         <div class="au_social">
                             <a href="#"><i id="au_icon" class="fab fa-instagram fa-lg"></i></a>

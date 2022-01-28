@@ -114,12 +114,12 @@ endif;
                         <p class="text_left">
                             Dir fällt es schwer am Ball zu bleiben? Mit nur einem Klick findest du
                             deine Sportpartner*Innen. Zusammen sportlich sein macht nicht nur Spaß,
-                            sondern fördert auch deine Gesunheit und dein Sozialbedürfnis!
+                            sondern fördert auch deine Gesundheit und dein Sozialbedürfnis!
                             squadUP bringt euch zusammen.
                         </p>
                     </div>
                     <div class="picbox">
-                        <img class="sec_pics" src="../pics/football.png">
+                        <img class="sec_pics" id="pic1" src="../pics/SVG/grafics2_picbox1.svg">
                     </div>
 
                 </div>
@@ -127,7 +127,7 @@ endif;
 
             <div class="sec_app" data-aos="zoom-in-left" data-aos-duration="1000">
                 <div class="picbox">
-                    <img class="sec_pics" src="../pics/volleyball.png">
+                    <img class="sec_pics" id="pic2" src="../pics/SVG/grafics2_picbox2.svg">
                 </div>
                 <div class="textbox">
                     <h4 class="text_right">
@@ -154,14 +154,14 @@ endif;
                         </p>
                     </div>
                     <div class="picbox">
-                        <img class="sec_pics" src="../pics/badmintonRainbow.png">
+                        <img class="sec_pics" id="pic3" src="../pics/SVG/grafics2_picbox3.svg">
                     </div>
                 </div>
             </div>
 
             <div class="sec_app" data-aos="zoom-in-left" data-aos-duration="1000">
                 <div class="picbox">
-                    <img class="sec_pics" src="../pics/basketball.png">
+                    <img class="sec_pics" id="pic4" src="../pics/SVG/grafics2_picbox4.svg">
                 </div>
                 <div class="textbox">
                     <h4 class="text_right">
@@ -476,7 +476,7 @@ endif;
         </section>
 
 
-
+        <!-- Kundenrezensionen -->
         <section id="events">
 
             <div class="feedback_container" id="brightness">

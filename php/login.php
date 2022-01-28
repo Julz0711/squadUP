@@ -6,7 +6,6 @@ require("connect.php");
 if (isset($_POST["submit"])) :
     $username = strtolower($_POST['username']);
     $password = $_POST['pw'];
-    //$password = md5($password);
 
     $user_query = $conn->prepare("SELECT id FROM users WHERE username = ? AND password = ?");
     $user_query->bind_param('ss', $username, $password);
